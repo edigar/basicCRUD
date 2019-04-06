@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="/faleconosco/public/css/bootstrap.css" type="text/css" rel="stylesheet">
+        <title>Fale conosco</title>
+    </head>
+    <body>
+        <div class="container col-md-4 col-md-offset-2">
+            <h1>Fale conosco</h1>
+            <form class="form-horizontal" action="contact/record" method="POST" role="form">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="nome" class="control-label">Nome</label>
+                        <div class="controls">
+                            <input type="text"  name="name" class="form-control" id="nome">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="assunto" class="control-label">Assunto</label>
+                        <div class="controls">
+                            <input type="text" name="subject" class="form-control" id="assunto">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentario" class="control-label">Comentário</label>
+                        <div class="controls">
+                            <textarea name="comment" class="form-control" id="comentario" rows="7"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <div class="controls">
+                            <input type="submit" class="btn btn-default">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

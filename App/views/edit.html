@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/basicCRUD/public/css/bootstrap.min.css">
+
+    <title>Editar</title>
+  </head>
+  <body>
+    <div class="container col-md-4 col-md-offset-2">
+      <h1>Editar <?php echo $edit['name']; ?></h1>
+      <form class="form-horizontal" action="/basicCRUD/<?php echo $edit['controller']; ?>/update" method="POST" role="form">
+        <fieldset>
+          <input type="hidden" name="id" value="<?php echo $edit['data']['id'] ?>">
+          <div class="form-group">
+            <label for="nome" class="control-label">Título</label>
+            <div class="controls">
+              <input type="text" name="title" value="<?php echo $edit['data']['title'] ?>" class="form-control" id="title">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="nome" class="control-label">Descrição</label>
+            <div class="controls">
+              <input type="text" name="description" value="<?php echo $edit['data']['description'] ?>" class="form-control" id="description">
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="controls">
+              <input type="submit" value='Alterar' class="btn btn-default">
+              <a href="/basicCRUD"><input type="button" value='Voltar' class="btn btn-default"></a>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
