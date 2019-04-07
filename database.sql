@@ -1,4 +1,4 @@
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
+CREATE DATABASE `mydb` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `mydb`;
 
 -- -----------------------------------------------------
