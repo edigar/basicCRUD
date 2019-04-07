@@ -28,3 +28,19 @@ $ nano config.php
 Add the database access data, such as database name, username and password.
 
 On your browser access localhost/basicCRUD/ and voilà. Enjoy listing... ;)
+
+## Screenshots
+
+Following is the 3 CRUD screenshots. In this case, the edit screen is the same for modules and activities.
+
+### Screen modules
+
+![Screenshot](Modules.png "Modules")
+
+### Screen activities
+
+![Screenshot](Activities.png "Activities")
+
+### Screen edit
+
+![Screenshot](Edit.png "Edit")
