@@ -31,27 +31,28 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach($modules as $module) { ?>
-                <tr>
-                    <td><?php echo $module['title']; ?></td>
-                    <td><?php echo $module['description']; ?></td>
-                    <td><?php echo $module['created_at'] == null ? '' : date("d/m/Y H:i:s", strtotime($module['created_at'])); ?></td>
-                    <td><?php echo $module['updated_at'] == null ? '' : date("d/m/Y H:i:s", strtotime($module['updated_at'])); ?></td>
-                    <td><?php echo $module['status']; ?></td>
-                    <td>
-                      <a href="/basicCRUD/modules/edit/<?php echo $module['id'] ?>"><button class="btn btn-primary">Editar</button></a>
-                      <a href="/basicCRUD/modules/delete/<?php echo $module['id'] ?>"><button class="btn btn-danger">Apagar</button></a>
-                    </td>
-                </tr>
-            <?php } ?>
-            <form class="form-horizontal" action="/basicCRUD/modules/record" method="POST" role="form">
-              <tr class="bg-info">
-                <td><input type="text"  name="title" class="form-control" id="title"></td>
-                <td colspan="2"><input type="text" name="description" class="form-control" id="description"></td>
-                <td></td>
-                <td></td>
-                <td><input type="submit" value="Adicionar módulo" class="btn btn-default"></td>
-              </tr>
+          <?php foreach($modules as $module) { ?>
+            <tr>
+                <td><?php echo $module['title']; ?></td>
+                <td><?php echo $module['description']; ?></td>
+                <td><?php echo $module['created_at'] == null ? '' : date("d/m/Y H:i:s", strtotime($module['created_at'])); ?></td>
+                <td><?php echo $module['updated_at'] == null ? '' : date("d/m/Y H:i:s", strtotime($module['updated_at'])); ?></td>
+                <td><?php echo $module['status']; ?></td>
+                <td>
+                  <a href="/basicCRUD/modules/edit/<?php echo $module['id'] ?>"><button class="btn btn-primary">Editar</button></a>
+                  <a href="/basicCRUD/modules/delete/<?php echo $module['id'] ?>"><button class="btn btn-danger">Apagar</button></a>
+                  <a href="/basicCRUD/activities/index/<?php echo $module['id'] ?>"><button class="btn btn-info">Atividades (<?php echo $module['totalActivities'] ?>)</button></a>
+                </td>
+            </tr>
+          <?php } ?>
+          <form class="form-horizontal" action="/basicCRUD/modules/record" method="POST" role="form">
+            <tr class="bg-info">
+              <td><input type="text"  name="title" class="form-control" id="title"></td>
+              <td colspan="2"><input type="text" name="description" class="form-control" id="description"></td>
+              <td></td>
+              <td></td>
+              <td><input type="submit" value="Adicionar módulo" class="btn btn-default"></td>
+            </tr>
           </form>
         </tbody>
     </table>

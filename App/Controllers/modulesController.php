@@ -11,17 +11,17 @@ class ModulesController extends Controller {
         $this->view('modules', $modules);
     }
 
-    public function delete($id = null) {
-        $result = Modules::deleteModule($id);
-        $modules = Modules::getModules();
-        $this->view('modules', $modules);
-    }
-
     public function record($module = null) {
         if($module != null) {
             $result = Modules::recordModule($module);
         }
 
+        $modules = Modules::getModules();
+        $this->view('modules', $modules);
+    }
+
+    public function delete($id = null) {
+        $result = Modules::deleteModule($id);
         $modules = Modules::getModules();
         $this->view('modules', $modules);
     }

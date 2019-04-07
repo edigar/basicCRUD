@@ -9,9 +9,15 @@ class Modules {
     public static function getModules($conditions = null, $columns = null) {
         $table = "modules";
         $columns = $columns == null ? "*" : $columns;
-        $db = DataBase::getInstance();;
+        $db = DataBase::getInstance();
+        $modules = $db->getList($table, $columns, $conditions);
+        
+        foreach ($modules as $key => $module) {
+            $total = $db->getList("activities", "count(*)", array("module_id" => $module['id']));
+            $modules[$key]['totalActivities'] = (int)$total[0]['count(*)'];
+        }
 
-        return $db->getList($table, $columns, $conditions);
+        return $modules;
     }
 
     public static function recordModule($data = null) {

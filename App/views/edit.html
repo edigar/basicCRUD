@@ -15,6 +15,9 @@
       <form class="form-horizontal" action="/basicCRUD/<?php echo $edit['controller']; ?>/update" method="POST" role="form">
         <fieldset>
           <input type="hidden" name="id" value="<?php echo $edit['data']['id'] ?>">
+          <?php if(isset($edit['data']['module_id'])) { ?> 
+            <input type="hidden" name="module_id" value="<?php echo $edit['data']['module_id'] ?>">
+          <?php } ?>
           <div class="form-group">
             <label for="nome" class="control-label">Título</label>
             <div class="controls">
