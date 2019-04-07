@@ -19,7 +19,7 @@ $ git clone git@github.com:edigar/basicCRUD-PHP.git basicCRUD
 $ cd basicCRUD
 $ cat database.sql
 ```
-Copy the output of the content into your database manager. An access inteface, such as MySQL Workbench, makes it easy to use.
+Copy the output of the content into your database manager and execute. An access inteface, such as MySQL Workbench, makes it easy to use.
 
 ```
 $ cd config
