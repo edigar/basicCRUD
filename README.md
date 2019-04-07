@@ -27,4 +27,4 @@ $ nano config.php
 ```
 Add the database access data, such as database name, username and password.
 
-On your browser access localhost/basicCRUD/ and voilà. Enjoy listing..
+On your browser access localhost/basicCRUD/ and voilà. Enjoy listing... ;)
