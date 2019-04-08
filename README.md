@@ -2,7 +2,7 @@
 
 A CRUD of lists in MVC with autoload and a simple persistence framework.
 
-Here you'll find three pages where you can get a list and a sublist. Additionally, you can add itens, edit itens and and delete any of the items in those lists.
+Here you'll find three pages where you can get a list and a sublist. Additionally, you can add itens, edit itens and delete any of the items in those lists.
 
 ## Minimum Requirements
 
