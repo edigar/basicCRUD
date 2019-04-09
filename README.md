@@ -6,7 +6,7 @@ Here you'll find three pages where you can get a list and a sublist. Additionall
 
 ## Minimum Requirements
 
-- PHP 7
+- PHP 5.6
 - apache 2.4.29 with Rewrite mode enabled
 - MySQL 5.7.25
 
